@@ -3,7 +3,7 @@
 function DBConnection(){
 
 $host = "localhost\sqlexpress";
-$user = "";
+$user = "victor.am.ccomp";
 $pwd = "";
 $db = "";
 

@@ -10,13 +10,14 @@ function RegisterLead($connection, $name, $email, $ip, $date){
     $stmt->bindParam(':name', $name);
     $stmt->bindParam(':email', $email);
     $stmt->bindParam(':ip', $ip);
-    if($stmt->execute(){
-      $msgReturn = array("msg"=> "Cadastro efetuado com sucesso.");
-    }else{
-      $msgReturn = array("msg"=> "Não foi possível efetuar o cadastro.");
-    }
-    
-    return json_encode($msgReturn);
+
+      if($stmt->execute(){
+        $msgReturn = array("msg"=> "Cadastro efetuado com sucesso.");
+      }else{
+        $msgReturn = array("msg"=> "Não foi possível efetuar o cadastro.");
+      }
+
+      return json_encode($msgReturn);
 
   } catch (PDOException $e) {
       echo $e->getMessage();
