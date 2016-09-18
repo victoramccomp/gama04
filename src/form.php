@@ -5,7 +5,7 @@ $connection = DBConnection();
 
 function RegisterLead($connection, $name, $email, $ip, $date){
   try {
-    $sql  = "INSERT INTO Leads(Name, Email, IP, RegTime)VALUES(:name, :email, :ip, GETDATE());";
+    $sql  = "INSERT INTO Leads(Name, Email, IP, RegTime)VALUES(:name, :email, :ip, NOW());";
     $stmt = $connection->prepare($sql);
     $stmt->bindParam(':name', $name);
     $stmt->bindParam(':email', $email);
@@ -23,6 +23,23 @@ function RegisterLead($connection, $name, $email, $ip, $date){
       echo $e->getMessage();
   }
 
+}
+
+
+function checkEmail($connection, $email){
+  try {
+    $sql  = "SELECT Email FROM Leads WHERE Email = :email;";
+    $stmt = $connection->prepare($sql);
+    $stmt->bindParam(':email', email);
+    $stmt->execute();
+    if($stmt->rowCount() > 0){
+        $msgReturn = array("msg"=> "Email já cadastrado.");
+        die(json_encode($msgReturn));
+      }
+
+  } catch (PDOException $e) {
+      echo $e->getMessage();
+  }
 }
 
 $name = $_POST['name'];
