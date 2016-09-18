@@ -6,3 +6,10 @@ input.error {
 .message{
   color: red;
 }
+
+
+
+.img-topo{
+  height: 300px;
+  width: 100%;
+}

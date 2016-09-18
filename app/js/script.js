@@ -6,6 +6,8 @@ function RegisterLead(){
 
   $(".required").removeClass("error");
 
+  $(".message").html("");
+
     if(name == ""){
       $("#name").addClass('error');
       $(".message").html("Campo Obrigatório");
@@ -31,10 +33,17 @@ function RegisterLead(){
       $.ajax({
             type: 'POST',
             url: 'src/form.php',
-            data: { name: 'name', email: 'email' },
+
+            data: { name: name, email: email },
             success:function(data){
-                console.log(data);
-                  $(".message").html(data.msg);
+              var msg = jQuery.parseJSON(data);
+              
+              if(msg.type == "true"){
+                $(".content-center").html('<div class="well well-lg text-center"><h2>'+msg.message+'</h2></div>');
+              }else{
+                $(".message").html(msg.message);
+              }
+
             },
             error:function(xhr, status, error){
               var err = eval("(" + xhr.responseText + ")");
