@@ -1,25 +1,29 @@
-$('form').submit(function()
-{
+function RegisterLead(){
+
   var name = $("#name").val();
   var email = $("#email").val();
   var isValid = true;
 
-    $('.required', this).each(function()
-    {
-        if (this.value == '')
-        {
-            isValid = false;
+  $(".required").removeClass("error");
 
-            $(this).addClass('error').focus();
-            $(".message").html("Campo Obrigatório");
+    if(name == ""){
+      $("#name").addClass('error');
+      $(".message").html("Campo Obrigatório");
+      return false;
+    }
 
-            return false;
-        }
-    });
+    if(email == ""){
+      $("#email").addClass('error');
+      $(".message").html("Campo Obrigatório");
+      return false;
 
-    if(!isValidEmailAddress(email)) {
+    }
+
+    if(!checkEmail(email)) {
         isValid = false;
+        $("#email").addClass('error');
         $(".message").html("Esse endereço de e-mail é inválido");
+        return false;
     }
 
 
@@ -27,18 +31,20 @@ $('form').submit(function()
       $.ajax({
             type: 'POST',
             url: 'src/form.php',
-            dataType: "json",
             data: { name: 'name', email: 'email' },
             success:function(data){
+                console.log(data);
                   $(".message").html(data.msg);
             },
-            error:function(){
+            error:function(xhr, status, error){
+              var err = eval("(" + xhr.responseText + ")");
+                console.log(err.Message);
                   $('.message').html('Não foi possível efetuar o cadastro.');
             }
           });
     }
 
-});
+}
 
 
 

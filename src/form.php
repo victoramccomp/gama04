@@ -48,3 +48,5 @@ $ip = $_SERVER["REMOTE_ADDR"];
 $date = "";
 
 RegisterLead($connection, $name, $email, $ip, $date);
+
+?>
