@@ -11,7 +11,7 @@
   </head>
   <body>
       <main>
-          <div class="nav-main">
+          <div class="nav-main" id="home">
               <div class="container">
                   <div class="row">
                       <div class="col-md-4">
@@ -19,10 +19,10 @@
                       </div>
                       <div class="col-md-8">
                           <ul class='nav-list'>
-                            <li><a href="#">Home</a></li> |
-                            <li><a href="#">Sobre a Coolture</a></li> |
-                            <li><a href="#">Sobre a Equipe</a></li> |
-                            <li><a href="#">Contato</a></li>
+                            <li><a href="#home" class='scroll'>Home</a></li> |
+                            <li><a href="#sobre" class='scroll'>Sobre a Coolture</a></li> |
+                            <li><a href="#time" class='scroll'>Sobre a Equipe</a></li> |
+                            <li><a href="#contato" class='scroll'>Contato</a></li>
                           </ul>
                       </div>
 
@@ -73,7 +73,7 @@
                 </form>
               </div>
           </section>
-          <section class='about-us'>
+          <section class='about-us' id="sobre">
               <div class="container">
                 <h2>Sobre a coolture</h2>
                 <p>
@@ -85,7 +85,7 @@
                 </p>
               </div>
           </section>
-          <section class='team'>
+          <section class='team' id="time">
               <div class="container">
                     <h2>Sobre a Equipe</h2>
                     <div class="nav-team text-center">
@@ -115,7 +115,7 @@
           </section>
       </main>
 
-      <footer>
+      <footer id="contato">
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
@@ -131,6 +131,8 @@
         </div>
 
       </footer>
+      <script type="text/javascript" src="app/js/jquery-3.1.0.min.js"></script>
+      <script type="text/javascript" src="app/js/script.js"></script>
 
   </body>
 </html>
