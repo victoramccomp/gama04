@@ -114,11 +114,12 @@ input.error {
 
 .btn-form{
   margin: 20px 0px;
+  margin-right: 90px;
   background-color:#696969;
   color: #FFFFFF;
   border: 1px solid #696969;
   border-radius: 8px;
-    padding: 5px 25px;
+  padding: 5px 25px;
 }
 
 .btn-form:hover{
@@ -150,6 +151,10 @@ footer{
   background-size: 100% 600px;
 }
 
+.about-us p{
+  font-size: 25px;
+}
+
 .about-us h2{
   text-transform: uppercase;
   font-family: Anders;
@@ -172,6 +177,7 @@ footer{
 }
 
 .radio-genero{
+  margin: 20px;
   width: 20%;
   float: left;
   margin-left: 15px;
