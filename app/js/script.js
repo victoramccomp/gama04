@@ -2,6 +2,7 @@ function RegisterLead(){
 
   var name = $("#name").val();
   var email = $("#email").val();
+  var resposta = $("#resposta").val();
   var isValid = true;
 
   $(".required").removeClass("error");
@@ -18,7 +19,12 @@ function RegisterLead(){
       $("#email").addClass('error');
       $(".message").html("Campo Obrigatório");
       return false;
+    }
 
+    if(resposta == ""){
+      $("#resposta").addClass('error');
+      $(".message").html("Campo Obrigatório");
+      return false;
     }
 
     if(!checkEmail(email)) {

@@ -7,9 +7,11 @@ input.error {
   color: red;
 }
 
-
-
 .img-topo{
   height: 100%;
   width: 100%;
+}
+
+.cadastro {
+  text-align: center;
 }
