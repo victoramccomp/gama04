@@ -63,8 +63,7 @@ function RegisterLead(){
             },
             error:function(xhr, status, error){
               var err = eval("(" + xhr.responseText + ")");
-                console.log(err.Message);
-                  $('.message').html('Não foi possível efetuar o cadastro.');
+              $('.message').html('Não foi possível efetuar o cadastro.');
             }
           });
     }
