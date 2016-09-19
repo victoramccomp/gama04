@@ -52,7 +52,7 @@ function RegisterLead(){
 
             data: { name: name, email: email, resposta: resposta },
             success:function(data){
-              var msg = jQuery.parseJSON(data);
+                  var msg = jQuery.parseJSON(data);
 
               if(msg.type == "true"){
                 $(".content-center").html('<div class="well well-lg text-center"><h2>'+msg.message+'</h2></div>');
