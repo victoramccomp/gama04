@@ -220,4 +220,19 @@ footer{
    padding: 5px;
  }
 
+
+ .about-us p{
+   font-size: 18px;
+ }
+
+ .about-us h2{
+   text-transform: uppercase;
+   font-family: Anders;
+   font-size: 30px;
+   margin-top: 50px;
+   color: #FFF;
+ }
+
+
+
 }
