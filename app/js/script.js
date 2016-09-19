@@ -12,13 +12,21 @@ function RegisterLead(){
 
   var name = $("#name").val();
   var email = $("#email").val();
-  var answer = $("#resposta").val();
-  var phone = $("#telefone").val();
+  var answer = $("#answer").val();
+  var phone = $("#phone").val();
+  var genre = $(".ipt-genero:checked").val();
+
   var isValid = true;
 
   $(".required").removeClass("error");
 
   $(".message").html("");
+
+  if(answer == ""){
+    $("#answer").addClass('error');
+    $(".message").html("Campo Obrigatório");
+    return false;
+  }
 
     if(name == ""){
       $("#name").addClass('error');
@@ -32,11 +40,7 @@ function RegisterLead(){
       return false;
     }
 
-    if(resposta == ""){
-      $("#resposta").addClass('error');
-      $(".message").html("Campo Obrigatório");
-      return false;
-    }
+
 
     if(!checkEmail(email)) { // VALIDANDO O EMAIL COM REGEX
         isValid = false;
@@ -51,12 +55,12 @@ function RegisterLead(){
             type: 'POST',
             url: 'src/form.php',
 
-            data: { name: name, email: email, answer: answer, phone: phone },
+            data: { name: name, email: email, answer: answer, phone: phone, genre:genre },
             success:function(data){
-                  var msg = jQuery.parseJSON(data);
+                var msg = jQuery.parseJSON(data);
 
               if(msg.type == "true"){
-                $(".content-center").html('<div class="well well-lg text-center"><h2>'+msg.message+'</h2></div>');
+                $(".form-lead").html('<div class="well well-lg text-center"><h2>'+msg.message+'</h2></div>');
               }else{
                 $(".message").html(msg.message);
               }

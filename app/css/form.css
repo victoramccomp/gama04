@@ -6,6 +6,10 @@ input.error {
   border: 2px solid red;
 }
 
+textarea.error {
+  border: 2px solid red!important;
+}
+
 .message{
   color: red;
 }

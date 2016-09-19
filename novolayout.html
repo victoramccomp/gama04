@@ -55,9 +55,13 @@
                   </p>
               </div>
               <form class="form-lead" method="POST">
+                <p class='message'>
+
+                </p>
+
               <div class="container">
                    <label for="Idresp">Resposta:</label><br>
-                   <textarea name="resp" id="Idresp" textarea></textarea>
+                   <textarea name="resp" id="answer" maxlength="140" placeholder="140 Caracteres" class='required'></textarea>
                    <p>Ei! Não se esqueça de preencher essas informações abaixo para entrarmos em contato e anunciarmos o vencedor:
                    </p>
               </div>
@@ -74,21 +78,21 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="Idtelefone">Telefone:</label><br>
-                                    <input type="text" class='form-control' id="Idtelefone" name="telefone">
+                                    <input type="text" class='form-control' id="phone" name="telefone">
                                 </div>
                                 <div class="form-group">
                                     <label for="gene">Genero:</label><br>
                                       <div class="row">
                                           <div class="radio-genero">
-                                            <input type="radio" id="Idmasculino" name="masculino" class="ipt-genero">
+                                            <input type="radio" name="genero" class="ipt-genero" checked value="1">
                                             <label for="Idmasculino">Masculino</label>
                                           </div>
                                           <div class="radio-genero">
-                                            <input type="radio" id="Idfeminino" name="feminino" class="ipt-genero">
+                                            <input type="radio" name="genero" class="ipt-genero" value="2">
                                             <label for="Idfeminino">Feminino</label>
                                           </div>
                                           <div class="radio-genero">
-                                            <input type="radio" id="Idoutro" name="outro" class="ipt-genero">
+                                            <input type="radio" name="genero" class="ipt-genero" value="3">
                                             <label for="Idoutro">Outros</label>
                                           </div>
                                       </div>
@@ -96,7 +100,7 @@
                             </div>
                        </div>
                         <button type="button" name="button" class='btn-form'>Baixe o regulamento</button>
-                        <button type="button" name="button" class='btn-form'>Enviar</button>
+                        <button type="button" name="button" class='btn-form' onClick="RegisterLead()">Enviar</button>
                 </div>
 
                 </form>

@@ -9,7 +9,7 @@ function RegisterLead($connection, $name, $email, $ip, $answer, $phone, $genre){
 
   try {
 
-    $sql  = "INSERT INTO Leads(Name, Email, IP, RegTime, Answer, Phone, Genero)VALUES(:name, :email, :ip, NOW(), :answer, :phone, :genre);";
+    $sql  = "INSERT INTO Leads(Name, Email, IP, RegTime, Answer, Phone, Genre)VALUES(:name, :email, :ip, NOW(), :answer, :phone, :genre);";
     $stmt = $connection->prepare($sql);
       $stmt->bindParam(':name', $name);
       $stmt->bindParam(':email', $email);
