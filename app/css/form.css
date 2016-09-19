@@ -79,8 +79,12 @@ input.error {
   font-size: 51px;
 }
 
-.form input[type="radio"]{
-  margin-left: 50px;
+.ipt-genero{
+  cursor: pointer;
+}
+
+.nav-main .logo{
+  margin-top: 20px;
 }
 
 .form-lead .container textarea{
@@ -140,19 +144,18 @@ footer{
 }
 
 .about-us{
-  background-color: #1E90FF;
-  padding: 100px;
+  padding: 150px 0px;
   background-image: url('../image/BG-about.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  color: #FFF;
-  height: 600px;
+  color: #333;
+  height: 100%;
   background-size: 100% 600px;
 }
 
 .about-us p{
-  font-size: 25px;
+  font-size: 22px;
 }
 
 .about-us h2{
@@ -160,6 +163,12 @@ footer{
   font-family: Anders;
   font-size: 45px;
   margin-top: 50px;
+  color: #FFF;
+}
+
+
+.about-us span{
+    font-weight: bold;
 }
 
 .nav-icon{
@@ -187,6 +196,9 @@ footer{
   font-size: 20px;
 }
 
+.text-contact{
+  font-size: 20px;
+}
 
 /* CSS MOBILE */
 @media only screen and (max-width: 768px) {
@@ -197,5 +209,9 @@ footer{
   .nav-list{
     display: none;
   }
+
+  .about-us {
+   padding: 5px;
+ }
 
 }
