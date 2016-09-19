@@ -52,31 +52,42 @@
                     Quando faz uma compra de roupas online?"
                   </p>
               </div>
+              <form class="form" method="POST">
               <div class="container">
-                    <label for="Idresp">Resposta:</label><br>
-                </div>
-              </div>
-              <div class="form-lead text-center">
-                <form class="form" method="POST">
-                    <textarea name="resp" id="Idresp"></textarea>
-                    <p>
-                      Ei! Não se esqueça de preencher essas informações abaixo para entrarmos em contato e anunciarmos o vencedor:
-                    </p>
+                   <label for="Idresp">Resposta:</label><br>
+                   <textarea name="resp" id="Idresp" class="form-lead.container" textarea></textarea>
+                   <p>Ei! Não se esqueça de preencher essas informações abaixo para entrarmos em contato e anunciarmos o vencedor:
+                   </p>
+              </div>    
                     <div class="container">
                         <div class="row form-group text-left">
-                            <div class="col-md-12">
-                              <label for="name">Nome:</label><br>
-                              <input type="text" class='form-control' id="name" name="name">
-                            </div>
-                            <div class="col-md-12">
-                              <label for="name">Email:</label><br>
-                              <input type="email" class='form-control' id="email" name="email">
-                            </div>
-
-                        </div>
+                            <div class="col-md-6">
+                                <div class="form-group" class = >
+                                    <label for="name">Nome:</label><br>
+                                    <input type="text" class='form-control' id="name" name="name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Email:</label><br>
+                                    <input type="email" class='form-control' id="email" name="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Idtelefone">Telefone:</label><br>
+                                    <input type="text" class='form-control' id="Idtelefone" name="telefone">
+                                </div>
+                                <div class="form-group">
+                                    <label for="gene">Genero:</label><br>
+                                    <input type="radio" id="Idmasculino" name="masculino">
+                                    <label for="Idmasculino">Masculino</label>
+                                    <input type="radio" id="Idfeminino" name="feminino">
+                                    <label for="Idfeminino">Feminino</label>
+                                    <input type="radio" id="Idoutro" name="outro">
+                                    <label for="Idoutro">Outros</label>
+                                </div>
+                            </div>    
+                       </div>
                         <button type="button" name="button" class='btn-form'>Baixe o regulamento</button>
                         <button type="button" name="button" class='btn-form'>Enviar</button>   
-                    </div>
+                </div>
 
                 </form>
               </div>

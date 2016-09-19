@@ -20,10 +20,12 @@ input.error {
 }
 /*Precisa alterar a img do BG aqui */
 .nav-main{
-    background-image: url('../image/bg-topo.jpg');
-    background-size: cover;
-    top: 0;
-    width: 100%;
+   background-image: url('../image/bg-topo.jpg');
+   background-size: cover;
+   top: 0;
+   width: 100%;
+   height: 275px;
+   background-size: 100% 275px;
 }
 
 .nav-list{
@@ -62,6 +64,7 @@ input.error {
 }
 
 .question{
+  font-family: amatic;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url('../image/bg-question.jpg');
@@ -69,21 +72,21 @@ input.error {
   padding: 200px 0px;
 }
 
+.form input[type="radio"]{ 
+  margin-left: 50px;
+}
 
 .form-lead textarea{
     height: 120px;
-    width: 80%;
+    width: 100%;
     background-color: #FAF0E6;
     border: 1px solid #DCDCDC;
     border-radius: 10px;
     padding: 10px;
 }
 
-.form p{
-  padding: 10px;
-}
-
 .form-control{
+  margin: 20px 0px;
   display: block;
   width: 100%;
   height: 34px;
@@ -103,6 +106,7 @@ input.error {
 }
 
 .btn-form{
+   
   margin: 20px 0px;
   background-color:#696969;
   color: #FFFFFF;
