@@ -16,7 +16,10 @@ input.error {
 }
 /*Precisa alterar a img do BG aqui */
 .nav-main{
-    background-color: #F38BAC;
+    background-image: url('../image/bg-topo.jpg');
+    background-size: cover;
+    top: 0;
+    width: 100%;
 }
 
 .nav-list{
