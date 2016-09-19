@@ -52,6 +52,6 @@ $email = $_POST['email'];
 $resposta = $_POST['resposta'];
 $ip = $_SERVER["REMOTE_ADDR"];
 
-RegisterLead($connection, $name, $email, $ip);
+RegisterLead($connection, $name, $email, $ip, $resposta);
 
 ?>

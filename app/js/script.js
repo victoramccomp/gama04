@@ -40,7 +40,7 @@ function RegisterLead(){
             type: 'POST',
             url: 'src/form.php',
 
-            data: { name: name, email: email },
+            data: { name: name, email: email, resposta: resposta },
             success:function(data){
               var msg = jQuery.parseJSON(data);
               
