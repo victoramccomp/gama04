@@ -237,6 +237,15 @@ footer{
    color: #FFF;
  }
 
+ .question{
+   font-family: Amatic;
+   background-repeat: no-repeat;
+   background-position: center;
+   background-image: url('../image/bg-question.jpg');
+   text-transform: uppercase;
+   padding: 160px 10px;
+   font-size: 36px;
+  }
 
 
 }
