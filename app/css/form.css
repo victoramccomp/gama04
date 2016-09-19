@@ -27,7 +27,7 @@ input.error {
 }
 
 .nav-list{
-    margin-top: 70px;
+    margin-top: 60px;
     color: #FFF;
 }
 
@@ -73,7 +73,7 @@ input.error {
 .form-lead textarea{
     height: 120px;
     width: 80%;
-    background-color: #DCDCDC;
+    background-color: #FAF0E6;
     border: 1px solid #DCDCDC;
     border-radius: 10px;
     padding: 10px;
@@ -91,9 +91,9 @@ input.error {
   font-size: 14px;
   line-height: 1.42857143;
   color: #555;
-  background-color: #fff;
+  background-color: #FAF0E6;
   background-image: none;
-  border: 1px solid #ccc;
+  border: 1px solid #DCDCDC;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
@@ -104,6 +104,12 @@ input.error {
 
 .btn-form{
   margin: 20px 0px;
+  background-color:#696969;
+  color: #FFFFFF;
+  border: 1px solid #696969;
+  border-radius: 8px;
+  width: 200px;  
+  height: 50px;  
 }
 
 .nav-team ul li{
@@ -114,9 +120,10 @@ footer{
   background-image: url('../image/bg-footer.jpg');
   background-repeat: no-repeat;
   background-position: center; 
-  padding-top: 150px;
+  padding-top: 330px;
   margin-bottom: 400px;
   background-size: cover;
+  color: #FFF;
 }
 
 .about-us{
