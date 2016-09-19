@@ -66,7 +66,7 @@ input.error {
   background-position: center;
   background-image: url('../image/bg-question.jpg');
   text-transform: uppercase;
-  padding: 100px 0px;
+  padding: 200px 0px;
 }
 
 
@@ -120,7 +120,8 @@ footer{
 }
 
 .about-us{
-    
+  background-color: #1E90FF;
+  padding: 100px
 }
 
 .nav-icon{
