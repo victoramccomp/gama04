@@ -12,7 +12,8 @@ function RegisterLead(){
 
   var name = $("#name").val();
   var email = $("#email").val();
-  var resposta = $("#resposta").val();
+  var answer = $("#resposta").val();
+  var phone = $("#telefone").val();
   var isValid = true;
 
   $(".required").removeClass("error");
@@ -50,7 +51,7 @@ function RegisterLead(){
             type: 'POST',
             url: 'src/form.php',
 
-            data: { name: name, email: email, resposta: resposta },
+            data: { name: name, email: email, answer: answer, phone: phone },
             success:function(data){
                   var msg = jQuery.parseJSON(data);
 
