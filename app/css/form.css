@@ -91,6 +91,10 @@ textarea.error {
   margin-top: 20px;
 }
 
+.form-lead{
+    font-family: OpenSans;
+}
+
 .form-lead .container textarea{
     height: 120px;
     width: 100%;
