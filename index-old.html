@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/x-icon" href="app/image/favicon.ico">
+    <title>Coolture</title>
+    <link rel="stylesheet" href="app/bootstrap-3.3.7-dist/css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="app/css/form.css" media="screen">
+    <script>
+
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-84283899-2', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+  </head>
+  <body>
+    <?php include_once("analyticstracking.php") ?>
+    <img src="app/image/bannerCoolture.jpg" alt="Coolture" class="img-responsive img-topo">
+ 		<br>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-sm-offset-3 content-center">
+            <div class="form-group">
+                <form class="form" method="POST">
+                    <h3 class="cadastro">
+                      EM BREVE MAIS INFORMAÇÕES!
+                      </br>
+                      CADASTRE-SE PARA SABER MAIS ;)
+                      </br>
+                      </br>
+                    </h3>
+                    <p class='message'>
+
+                    </p>
+                    <div class="form-group">
+                      <input type="text" name="name" placeholder="Nome" id="name" class="form-control input-lg required">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                      <input type="text" name="email" placeholder="Email" id="email" class="form-control input-lg required">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                      <h3 class="cadastro">
+                        Para você, o que é mais importante quando faz uma compra de roupas online?
+                      </h3>
+                      <input type="text" name="resposta" placeholder="Responda aqui" id="resposta" class="form-control input-lg required">
+                    </div>
+                    <br>
+                    <div class="form-group">
+                      <button type="button" name="button" class="btn btn-primary btn-lg active" onClick="RegisterLead()">Enviar</button>
+                    </div>
+                   </form>
+                 </div>
+          </div>
+        </div>
+      </div>
+
+        <script type="text/javascript" src="app/js/jquery-3.1.0.min.js"></script>
+        <script type="text/javascript" src="app/js/script.js"></script>
+
+
+   </body>
+</html>
