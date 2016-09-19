@@ -3,18 +3,20 @@
 require_once "connection.php";
 $connection = DBConnection();
 
-function RegisterLead($connection, $name, $email, $ip, $resposta){
+function RegisterLead($connection, $name, $email, $ip, $resposta, $telefone, $genero){
 
     checkEmail($connection, $email);
 
   try {
 
-    $sql  = "INSERT INTO Leads(Name, Email, IP, RegTime, Resposta)VALUES(:name, :email, :ip, NOW(), :resposta);";
+    $sql  = "INSERT INTO Leads(Name, Email, IP, RegTime, Resposta, Telefone, Genero)VALUES(:name, :email, :ip, NOW(), :resposta, :telefone, :genero);";
     $stmt = $connection->prepare($sql);
       $stmt->bindParam(':name', $name);
       $stmt->bindParam(':email', $email);
       $stmt->bindParam(':ip', $ip);
       $stmt->bindParam(':resposta', $resposta);
+      $stmt->bindParam(':telefone', $telefone);
+      $stmt->bindParam(':genero', $genero);
 
         if($stmt->execute()){
             $msgReturn = array("type" => "true", "message"=> "Cadastro efetuado com sucesso.");
@@ -50,8 +52,10 @@ function checkEmail($connection, $email){
 $name = $_POST['name'];
 $email = $_POST['email'];
 $resposta = $_POST['resposta'];
+$telefone = $_POST['telefone'];
+$genero = $_POST['genero'];
 $ip = $_SERVER["REMOTE_ADDR"];
 
-RegisterLead($connection, $name, $email, $ip, $resposta);
+RegisterLead($connection, $name, $email, $ip, $resposta, $telefone, $genero);
 
 ?>
