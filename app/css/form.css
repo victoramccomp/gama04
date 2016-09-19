@@ -1,6 +1,5 @@
 input.error {
   border: 2px solid red;
-
 }
 
 .message{
@@ -15,12 +14,37 @@ input.error {
 .cadastro {
   text-align: center;
 }
+/*Precisa alterar a img do BG aqui */
+.nav-main{
+    background-color: #F38BAC;
+}
+
+.nav-list{
+    margin-top: 40px;
+    color: #FFF;
+}
 
 .nav-main .nav-list li{
     decoration: none;
     display: inline;
     text-transform: uppercase;
+    margin: 0px 10px;
+    font-size: 15px;
+
 }
+
+.nav-main .nav-list li a{
+  color: #FFF;
+  text-decoration: none;
+  webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.nav-main .nav-list li a:hover{
+    color: #333;
+}
+
 
 .nav-main{
   text-align: center;
@@ -74,9 +98,38 @@ input.error {
 
 .nav-team ul li{
   display: inline;
-
 }
 
 footer{
   padding-top: 150px;
+}
+
+.about-us{
+    background-color: #ACDFFC;
+}
+
+.nav-icon{
+  position: fixed;
+  float: right;
+  right: 20px;
+  top: 15px;
+  cursor: pointer;
+  z-index: 2000;
+  display: none;
+}
+
+.nav-icon i{
+    font-size: 40px;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .nav-icon{
+      display: block;
+  }
+
+  .nav-list{
+    display: none;
+  }
+
 }
