@@ -1,6 +1,6 @@
-@font-face { font-family: amatic; src: url('.../fonts/AmaticSC-Regular.ttf'); }
-@font-face { font-family: anders; src: url('.../fonts/Anders.ttf'); }
-@font-face { font-family: OpenSans; src: url('.../fonts/Opensans-Regular.ttf'); }
+@font-face { font-family: Amatic; src: url('../fonts/AmaticSC-Regular.ttf'); }
+@font-face { font-family: Anders; src: url('../fonts/Anders.ttf'); }
+@font-face { font-family: OpenSans; src: url('../fonts/Opensans-Regular.ttf'); }
 
 input.error {
   border: 2px solid red;
@@ -26,6 +26,10 @@ input.error {
    width: 100%;
    height: 275px;
    background-size: 100% 275px;
+}
+
+.nav-icons{
+    margin-top: 60px;
 }
 
 .nav-list{
@@ -61,6 +65,8 @@ input.error {
 
 .text-promotional{
   padding-top: 100px;
+  color: #333;
+  font-size: 22px;
 }
 
 .question{
@@ -69,14 +75,15 @@ input.error {
   background-position: center;
   background-image: url('../image/bg-question.jpg');
   text-transform: uppercase;
-  padding: 200px 0px;
+  padding: 160px 0px;
+  font-size: 51px;
 }
 
-.form input[type="radio"]{ 
+.form input[type="radio"]{
   margin-left: 50px;
 }
 
-.form-lead textarea{
+.form-lead .container textarea{
     height: 120px;
     width: 100%;
     background-color: #FAF0E6;
@@ -86,34 +93,36 @@ input.error {
 }
 
 .form-control{
-  margin: 20px 0px;
-  display: block;
-  width: 100%;
-  height: 34px;
-  padding: 6px 12px;
-  font-size: 14px;
-  line-height: 1.42857143;
-  color: #555;
-  background-color: #FAF0E6;
-  background-image: none;
-  border: 1px solid #DCDCDC;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    margin: 20px 0px;
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #FAF0E6;
+    background-image: none;
+    border: 1px solid #DCDCDC;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
 .btn-form{
-   
   margin: 20px 0px;
   background-color:#696969;
   color: #FFFFFF;
   border: 1px solid #696969;
   border-radius: 8px;
-  width: 200px;  
-  height: 50px;  
+    padding: 5px 25px;
+}
+
+.btn-form:hover{
+    background-color:#313131;
 }
 
 .nav-team ul li{
@@ -123,16 +132,29 @@ input.error {
 footer{
   background-image: url('../image/bg-footer.jpg');
   background-repeat: no-repeat;
-  background-position: center; 
+  background-position: center;
   padding-top: 330px;
-  margin-bottom: 400px;
   background-size: cover;
   color: #FFF;
 }
 
 .about-us{
   background-color: #1E90FF;
-  padding: 100px
+  padding: 100px;
+  background-image: url('../image/BG-about.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #FFF;
+  height: 600px;
+  background-size: 100% 600px;
+}
+
+.about-us h2{
+  text-transform: uppercase;
+  font-family: Anders;
+  font-size: 45px;
+  margin-top: 50px;
 }
 
 .nav-icon{
@@ -147,6 +169,12 @@ footer{
 
 .nav-icon i{
     font-size: 40px;
+}
+
+.radio-genero{
+  width: 20%;
+  float: left;
+  margin-left: 15px;
 }
 
 
