@@ -11,12 +11,14 @@ function ListagemLeads($connection) {
         $totalLeads = 0;
         
         echo "<table><tr>" .
+             "<th><strong>Nome</strong></th>" .
              "<th><strong>Resposta</strong></th>" .
              "<th><strong>Horário</strong></th></tr>";
 
         while ($linha = $stmt->fetch(PDO::FETCH_ASSOC)) {
             $totalLeads++;
             echo "<tr>" .
+                 "<td>{$linha['name']}</td>" .
                  "<td>{$linha['answer']}</td>" .
                  "<td>{$linha['regtime']}</td>" .
                  "</tr>";
