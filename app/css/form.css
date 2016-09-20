@@ -6,6 +6,10 @@ input.error {
   border: 2px solid red;
 }
 
+.invisible{
+  display:none;
+}
+
 textarea.error {
   border: 2px solid red!important;
 }
