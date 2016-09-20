@@ -16,30 +16,43 @@ $(document).ready(function() {
         if(answer == ""){
           $("#answer").addClass('error');
           $(".message").html("Campo Obrigatório");
-          return false;
-        }
+          //return false;
+        }else {
+ 	  $("#answer").removeClass('error');
+	}
+
 
           if(name == ""){
             $("#name").addClass('error');
-            $(".message").html("Campo Obrigatório");
-            return false;
-          }
+            $("#camposObrigatorios").html("Preencha os campos que estão em vermelho");
+            $("#camposObrigatorios").css("color", "red");
+            //return false;
+          } else {
+ 	    $("#name").removeClass('error');
+
+	 }
 
           if(email == ""){
             $("#email").addClass('error');
             $(".message").html("Campo Obrigatório");
-            return false;
-          }
+            $("#camposObrigatorios").html("Preencha os campos que estão em vermelho");
+            //return false;
+          }else {
+ 	    $("#email").removeClass('error');
+     
+	  }
 
 
-
-          if(!checkEmail(email)) { // VALIDANDO O EMAIL COM REGEX
+          if(email != "" && !checkEmail(email)) { // VALIDANDO O EMAIL COM REGEX
               isValid = false;
               $("#email").addClass('error');
               $(".message").html("Esse endereço de e-mail é inválido");
-              return false;
+              //return false;
           }
 
+          if(email != "" && name != "" && answer != ""){
+		$("#camposObrigatorios").html("");
+	  }
 
           if(isValid == true){
                   $.ajax({
@@ -60,8 +73,10 @@ $(document).ready(function() {
                   error:function(xhr, status, error){
                     var err = eval("(" + xhr.responseText + ")");
                     $('.message').html('Não foi possível efetuar o cadastro.');
+
                   }
                 });
+           
           }
 
     });
