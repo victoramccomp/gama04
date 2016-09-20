@@ -1,6 +1,6 @@
 @font-face { font-family: Amatic; src: url('../fonts/AmaticSC-Regular.ttf'); }
 @font-face { font-family: Anders; src: url('../fonts/Anders.ttf'); }
-@font-face { font-family: OpenSans; src: url('../fonts/Opensans-Regular.ttf'); }
+@font-face { font-family: OpenSans; src: url('../fonts/OpenSans-Regular.ttf'); }
 
 input.error {
   border: 2px solid red;
