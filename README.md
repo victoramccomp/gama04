@@ -1,2 +1,2 @@
 # gama04
-Assagniment Gama
+Assignment em grupo 02
