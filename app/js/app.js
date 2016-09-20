@@ -16,43 +16,37 @@ $(document).ready(function() {
         if(answer == ""){
           $("#answer").addClass('error');
           $(".message").html("Campo Obrigatório");
-          //return false;
-        }else {
- 	  $("#answer").removeClass('error');
-	}
+          return false;
+        }
 
 
           if(name == ""){
+            isValid = false;
             $("#name").addClass('error');
             $("#camposObrigatorios").html("Preencha os campos que estão em vermelho");
             $("#camposObrigatorios").css("color", "red");
-            //return false;
-          } else {
- 	    $("#name").removeClass('error');
-
-	 }
+            return false;
+          }
 
           if(email == ""){
+            isValid = false;
             $("#email").addClass('error');
             $(".message").html("Campo Obrigatório");
             $("#camposObrigatorios").html("Preencha os campos que estão em vermelho");
-            //return false;
-          }else {
- 	    $("#email").removeClass('error');
-     
-	  }
+            return false;
+          }
 
 
           if(email != "" && !checkEmail(email)) { // VALIDANDO O EMAIL COM REGEX
               isValid = false;
               $("#email").addClass('error');
               $(".message").html("Esse endereço de e-mail é inválido");
-              //return false;
+              return false;
           }
 
           if(email != "" && name != "" && answer != ""){
-		$("#camposObrigatorios").html("");
-	  }
+		              $("#camposObrigatorios").html("");
+	        }
 
           if(isValid == true){
                   $.ajax({
@@ -76,7 +70,7 @@ $(document).ready(function() {
 
                   }
                 });
-           
+
           }
 
     });
