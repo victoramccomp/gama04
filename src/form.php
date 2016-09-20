@@ -19,7 +19,7 @@ function RegisterLead($connection, $name, $email, $ip, $answer, $phone, $genre){
       $stmt->bindParam(':genre', $genre);
 
         if($stmt->execute()){
-            $msgReturn = array("type" => "true", "message"=> "Cadastro efetuado com sucesso.");
+            $msgReturn = array("type" => "true", "message"=> "Obrigado pela inscrição. <br>Você já está concorrendo! :)");
         }else{
             $msgReturn = array("type" => "false", "message"=> "Não foi possível efetuar o cadastro.");
         }

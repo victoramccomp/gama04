@@ -15,7 +15,7 @@ $(document).ready(function() {
 
         if(answer == ""){
           $("#answer").addClass('error');
-          $(".message").html("Campo Obrigatório");
+          bootbox.alert("Necessário responder a questão.");
           return false;
         }
 
@@ -23,7 +23,7 @@ $(document).ready(function() {
           if(name == ""){
             isValid = false;
             $("#name").addClass('error');
-            $("#camposObrigatorios").html("Preencha os campos que estão em vermelho");
+            bootbox.alert("Necessário preencher com o Nome.");
             $("#camposObrigatorios").css("color", "red");
             return false;
           }
@@ -31,7 +31,7 @@ $(document).ready(function() {
           if(email == ""){
             isValid = false;
             $("#email").addClass('error');
-            $(".message").html("Campo Obrigatório");
+            bootbox.alert("Necessário preencher com o Email");
             $("#camposObrigatorios").html("Preencha os campos que estão em vermelho");
             return false;
           }
@@ -40,7 +40,7 @@ $(document).ready(function() {
           if(email != "" && !checkEmail(email)) { // VALIDANDO O EMAIL COM REGEX
               isValid = false;
               $("#email").addClass('error');
-              $(".message").html("Esse endereço de e-mail é inválido");
+              bootbox.alert("Esse endereço de Email é inválido");
               return false;
           }
 
@@ -58,15 +58,19 @@ $(document).ready(function() {
                       var msg = jQuery.parseJSON(data);
 
                     if(msg.type == "true"){
-                      $(".form-lead").html('<div class="well well-lg text-center"><h2>'+msg.message+'</h2></div>');
+                      bootbox.alert(msg.message);
+                      $("#name").val("");
+                      $("#email").val("");
+                      $("#answer").val("");
+                      $("#phone").val("");
                     }else{
-                      $(".message").html(msg.message);
+                      bootbox.alert(msg.message);
                     }
 
                   },
                   error:function(xhr, status, error){
                     var err = eval("(" + xhr.responseText + ")");
-                    $('.message').html('Não foi possível efetuar o cadastro.');
+                    bootbox.alert('Não foi possível efetuar o cadastro.');
 
                   }
                 });
