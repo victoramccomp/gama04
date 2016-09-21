@@ -19,7 +19,7 @@ function setNewPost(){
        contentType: false,
        processData: false,
        success : function(data) {
-          console.log(data);
+      
             var post = jQuery.parseJSON(data);
             if(post.type == "true"){
                 bootbox.confirm(post.msg, function(conf) {
@@ -46,7 +46,7 @@ function getAllPosts(){
           url: '../src/post.php',
           data: { action: 'getAllPosts' },
           success:function(data){
-            console.log(data);
+
             var posts = jQuery.parseJSON(data);
 
             if(posts == ""){
