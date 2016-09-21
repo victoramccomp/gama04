@@ -18,53 +18,24 @@
                       </a>
                     </div>
                   </div>
-                  <div class="table-responsive">
-                      <table class="table table-striped">
-                        <thead>
-                          <tr>
-                            <th colspan="2">#</th>
-                            <th>Post</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td><a href="#"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true" ></a></td>
-                            <td><a href="#"><i class="fa fa-close fa-lg" aria-hidden="true"></i></a></td>
-                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-                          </tr>
-                          <tr>
-                            <td><a href="#"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true" ></a></td>
-                            <td><a href="#"><i class="fa fa-close fa-lg" aria-hidden="true"></i></a></td>
-                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-                          </tr>
-                          <tr>
-                            <td><a href="#"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true" ></a></td>
-                            <td><a href="#"><i class="fa fa-close fa-lg" aria-hidden="true"></i></a></td>
-                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-                          </tr>
-                          <tr>
-                            <td><a href="#"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true" ></a></td>
-                            <td><a href="#"><i class="fa fa-close fa-lg" aria-hidden="true"></i></a></td>
-                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-                          </tr>
-                          <tr>
-                            <td><a href="#"><i class="fa fa-pencil-square-o fa-lg" aria-hidden="true" ></a></td>
-                            <td><a href="#"><i class="fa fa-close fa-lg" aria-hidden="true"></i></a></td>
-                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</td>
-                          </tr>
+                  <br/>
 
-                        </tbody>
-                      </table>
-                    </div>
+                  <div id="content" class="table-responsive">
+
+                  </div>
+
                 </div>
-
-
 
         </div>
 
 
 
-
     </main>
+
+    <?php include('scripts.php'); ?>
+    <script type="text/javascript">
+        getAllPosts();
+    </script>
+
   </body>
 </html>
