@@ -1,30 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Coolture</title>
-    <link rel="shortcut icon" type="image/x-icon" href="app/image/favicon.ico">
-    <link rel="stylesheet" href="../app/bootstrap/bootstrap.min.css" media="screen">
-    <link rel="stylesheet" href="../app/font-awesome-4.6.3/css/font-awesome.min.css" media="screen">
-    <link rel="stylesheet" href="../app/css/admin.css" media="screen">
+    <?php include('header.php'); ?>
   </head>
   <body>
     <main>
         <div class="container-fluid">
-                <div class="sidebar">
-                    <h3>Coolture</h3>
-                    <ul class="nav-sidebar">
-                      <a href="index.html"><li><i class="fa fa-list-alt" aria-hidden="true"></i> Leads</li></a>
-                      <a href="posts.html"><li><i class="fa fa-newspaper-o" aria-hidden="true"></i> Posts</li></a>
-                    </ul>
-                </div>
+              <?php include('sidebar.php'); ?>
                 <div class="container container-admin">
                   <h2>Posts</h2>
                   <div class="row">
                     <div class="col-md-2">
-                      <button type="button" name="button" class='btn btn-primary-admin'>
-                          <i class="fa fa-plus" aria-hidden="true"></i> Novo Post
-                      </button>
+                      <a href="create-post.php">
+                        <button type="button" name="button" class='btn btn-primary-admin'>
+                           <i class="fa fa-plus" aria-hidden="true"></i> Novo Post
+                         </button>
+                      </a>
                     </div>
                   </div>
                   <div class="table-responsive">
