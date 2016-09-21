@@ -5,11 +5,13 @@ $(document).ready(function() {
 
 function setNewPost(){
     loaderContent('init');
+
+    var contentPost = tinyMCE.get('post').getContent();
     var post = new FormData();
 
     post.append('title', $("#title").val());
     post.append('picture', $('#picture')[0].files[0]);
-    post.append('post', $('#post').val());
+    post.append('post', contentPost);
     post.append('action', 'setNewPost');
 
     $.ajax({
@@ -19,8 +21,7 @@ function setNewPost(){
        contentType: false,
        processData: false,
        success : function(data) {
-          console.log(data);
-            var post = jQuery.parseJSON(data);
+           var post = jQuery.parseJSON(data);
             if(post.type == "true"){
                 bootbox.confirm(post.msg, function(conf) {
                     if(conf == true){
@@ -46,7 +47,7 @@ function getAllPosts(){
           url: '../src/post.php',
           data: { action: 'getAllPosts' },
           success:function(data){
-            console.log(data);
+
             var posts = jQuery.parseJSON(data);
 
             if(posts == ""){
