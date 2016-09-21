@@ -16,7 +16,7 @@ class UploadImage{
 
 		private function getExtension(){
 			//retorna a extensao da imagem
-			return $extension = strtolower(end(explode('.', $this->file['name'])));
+			return $extension = end((explode('.', $this->file['name'])));
 		}
 
 		private function checkImage($extension){

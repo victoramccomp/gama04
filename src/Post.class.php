@@ -41,7 +41,7 @@ class Post{
 
 
     function setNewPost(){
-          var_dump($this->picture);
+       
 
           $upload = new UploadImage();
           $upload->file = $this->picture;
