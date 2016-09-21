@@ -1,11 +1,26 @@
 /* FUNCAO DE ANCORA DO MENU */
 jQuery(document).ready(function($) {
     $(".scroll").click(function(event){
-        event.preventDefault();
-        $('html,body').animate({scrollTop:$(this.hash).offset().top}, 800);
-   });
+       event.preventDefault();
+       $('html,body').animate({scrollTop:$(this.hash).offset().top}, 800);
+    });
+
+    /* FUNCAO PARA CONTADOR*/
+    var text_max = 140;
+    $('#textarea_feedback').html(text_max + ' caracteres restantes');
+
+    $('#answer').keyup(function() {
+       var text_length = $('#answer').val().length;
+       var text_remaining = text_max - text_length;
+
+       $('#textarea_feedback').html(text_remaining + ' caracteres restantes');
+    });
+
+    $('#phone').mask(SPMaskBehavior, spOptions);
+    /* --------------------- */
 
 });
+
 /* --------------------------- */
 
 /* FUNCAO QUE CHECA O EMAIL VALIDO POR REGEX */
@@ -15,20 +30,16 @@ function checkEmail(emailAddress) {
     return pattern.test(emailAddress);
 }
 
+/* https://igorescobar.github.io/jQuery-Mask-Plugin/ */
+
+function SPMaskBehavior(val) {
+  return val.replace(/\D/g, '').length === 11 ? '(00) 00000-0000' : '(00) 0000-00009';
+}
+
+var spOptions = {
+  onKeyPress: function(val, e, field, options) {
+      field.mask(SPMaskBehavior.apply({}, arguments), options);
+    }
+};
+
 /* --------------------- */
-/* --------------------- */
-
-/* FUNCAO PARA CONTADOR*/
-
-$(document).ready(function() {
-    var text_max = 140;
-    $('#textarea_feedback').html(text_max + ' caracteres restantes');
-
-    $('#answer').keyup(function() {
-        var text_length = $('#answer').val().length;
-        var text_remaining = text_max - text_length;
-
-        $('#textarea_feedback').html(text_remaining + ' caracteres restantes');
-    });
-
-    /* --------------------- */

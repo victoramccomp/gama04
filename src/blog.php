@@ -25,17 +25,22 @@ class Posts
         $stmt->execute();
         
         $paginacao = 0;
+        
+        $linhas = $stmt->fetchAll(PDO::FETCH_OBJ);
+        $output = array();
 
-        while ($linha = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        foreach ($linhas as $linha) {
             $paginacao++;
 
-            echo "<p>{$linha['post']}</p>" .
-                 "</br>";
+            $output[] = array("Title"=>$linha->title, "Post"=>$linha->post);
+
             if ($paginacao == 5) {
                 //Irá realizar paginação
                 $paginacao = 0;
             }
         }
+
+        echo json_encode($output);
     }
 }
 
