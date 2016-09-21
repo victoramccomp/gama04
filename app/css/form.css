@@ -9,12 +9,15 @@ input.error {
 .autor{
   font-family: OpenSans;
 }
+
 .titulo{
   font-family: Anders;
 }
+
 .subtitulo{
   font-family: OpenSans;
 }
+
 .postagem{
   font-family: OpenSans;
 }
@@ -39,7 +42,7 @@ textarea.error {
 .cadastro {
   text-align: center;
 }
-/*Precisa alterar a img do BG aqui */
+
 .nav-main{
    background-image: url('../image/bg-topo.jpg');
    background-size: cover;
@@ -212,10 +215,9 @@ footer{
 }
 
 .radio-genero{
-  margin: 20px;
-  width: 20%;
+  margin: 20px 0px 20px 15px;
+  width: 10%;
   float: left;
-  margin-left: 15px;
 }
 
 .contato{
@@ -253,6 +255,10 @@ button.close {
   padding: 5px 25px;
 }
 
+ .resposta_feedback {
+   float: right; 
+ }
+ 
 /* CSS MOBILE */
 @media only screen and (max-width: 768px) {
   .nav-icon{
@@ -289,6 +295,5 @@ button.close {
    padding: 160px 10px;
    font-size: 36px;
   }
-
-
+  /*Fim CSS Mobile*/
 }
