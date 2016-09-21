@@ -25,7 +25,7 @@
                                     <textarea name="post" id="post"></textarea>
                                 </div>
                                 <br>
-                                <button type="submit" name="button" class='btn btn-primary-admin'>Enviar</button>
+                                <button type="button" name="button" class='btn btn-primary-admin' onclick="setNewPost()">Enviar</button>
                             </div>
                         </form>
                   </div>
