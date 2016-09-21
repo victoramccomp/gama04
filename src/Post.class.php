@@ -42,6 +42,7 @@ class Post{
 
     function setNewPost(){
 
+          echo $this->picture;
           $upload = new UploadImage();
           $upload->file = $this->picture;
           $this->picture = $upload->save();
