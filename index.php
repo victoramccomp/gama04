@@ -99,9 +99,9 @@
           </section>
 
       </main>
-
+      <?php include('scripts.php'); ?>
       <?php include('footer.php'); ?>
-      <?php include('scrips.php'); ?>
+
 
   </body>
 </html>
