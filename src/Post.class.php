@@ -54,9 +54,9 @@ class Post{
           $stmt = $this->db->bind(':picture', $this->picture);
 
           if($this->db->execute()){
-              $output = array(type=> "true", msg => "Seu post foi cadastrado (:");
+              $output = array("type" => "true", "msg" => "Seu post foi cadastrado (:");
           }else{
-              $output = array(type=> "false", msg => "Não foi possível cadastrar seu post ):");
+              $output = array("type" => "false", "msg" => "Não foi possível cadastrar seu post ):");
           }
 
           echo json_encode($output);
