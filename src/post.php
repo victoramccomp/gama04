@@ -1,7 +1,8 @@
 <?php
+ini_set('display_errors', true);
 require('Post.class.php');
 
-// pega a variavel GET que passamos no action do form
+// pega a variavel POST que passamos no action do form
 if (isset($_POST['action'])){
     $action = $_POST['action'];
 
