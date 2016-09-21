@@ -22,7 +22,7 @@ class Post{
     }
 
     function getAllPost(){
-          $stmt = $this->db->query("SELECT title, post, author_id, date_Posted FROM Posts ORDER BY date_Posted");
+          $stmt = $this->db->query("SELECT id, title, post, author_id, date_Posted FROM Posts ORDER BY date_Posted");
           $posts = $this->db->result();
 
           $output = array();
@@ -36,18 +36,21 @@ class Post{
           echo json_encode($output);
     }
 
-/*
+
     function setNewPost(){
-          $database = new Database();
-          $stmt = $database->query("SELECT title, post, author_id, date_Posted FROM Posts");
-          $stmt = $database->execute();
-          $stmt = $database->result();
+          $stmt = $this->db->query("INSERT INTO Posts(title, post, author_id, date_Posted)
+                                      VALUES(:title, :post, 1, NOW())");
+          $stmt = $this->db->bind(':title', $this->title);
+          $stmt = $this->db->bind(':post', $this->post);
 
-          return var_dump($stmt);
+          if($this->db->execute()){
+              $output = array(type=> "true", msg => "Seu post foi cadastrado (:");
+          }else{
+              $output = array(type=> "false", msg => "Não foi possível cadastrar seu post ):");
+          }
+
+          echo json_encode($output);
     }
-    */
-
-
 
 
 

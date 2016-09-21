@@ -30,7 +30,7 @@ if (isset($_POST['action'])){
               $post->post = $_POST['post'];
 
               //chamando a funcao que faz o insert
-              $post->getAllPost();
+              $post->setNewPost();
 
               }
           break;

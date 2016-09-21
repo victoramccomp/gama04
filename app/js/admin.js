@@ -9,7 +9,7 @@ $(document).ready(function() {
         post.append('title', $("#title").val());
         post.append('capa', $('#capa')[0].files[0]);
         post.append('post', $('#post').val());
-        post.append('action', 'getAllPosts');
+        post.append('action', 'setNewPost');
 
         $.ajax({
            url : '../src/post.php',
@@ -18,7 +18,17 @@ $(document).ready(function() {
            processData: false,
            contentType: false,
            success : function(data) {
-               console.log(data);
+                var post = jQuery.parseJSON(data);
+                if(post.type == "true"){
+                    bootbox.confirm(post.msg, function(conf) {
+                        if(conf == true){
+                            window.location.href = 'posts.php';
+                        }
+                    });
+                }else{
+                  bootbox.alert(post.msg);
+                }
+
 
               }
         });
