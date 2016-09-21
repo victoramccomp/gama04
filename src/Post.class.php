@@ -43,14 +43,14 @@ class Post{
 
 
     function setNewPost(){
-       
+
           if(isset($this->picture)){
               $upload = new UploadImage();
               $upload->file = $this->picture;
               $this->picture = $upload->save();
           }
 
-          $stmt = $this->db->query("INSERT INTO Posts(title, author_id, date_Posted, picture)
+          $stmt = $this->db->query("INSERT INTO Posts(title, post, author_id, date_Posted, picture)
                                       VALUES(:title, :post, 1, NOW(), :picture)");
           $stmt = $this->db->bind(':title', $this->title);
           $stmt = $this->db->bind(':post', $this->post);
