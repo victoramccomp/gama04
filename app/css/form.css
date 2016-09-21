@@ -6,6 +6,19 @@ input.error {
   border: 2px solid red;
 }
 
+.autor{
+  font-family: OpenSans;
+}
+.titulo{
+  font-family: Anders;
+}
+.subtitulo{
+  font-family: OpenSans;
+}
+.postagem{
+  font-family: OpenSans;
+}
+
 .invisible{
   display:none;
 }
