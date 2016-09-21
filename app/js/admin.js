@@ -5,11 +5,13 @@ $(document).ready(function() {
 
 function setNewPost(){
     loaderContent('init');
-    var post = new FormData();
 
+    var contentPost = tinyMCE.get('post').getContent();
+    var post = new FormData();
+    
     post.append('title', $("#title").val());
     post.append('picture', $('#picture')[0].files[0]);
-    post.append('post', $('#post').val());
+    post.append('post', contentPost);
     post.append('action', 'setNewPost');
 
     $.ajax({
