@@ -51,27 +51,19 @@ function getAllPosts(){
 
             }else{
 
-                  var write = "";
-
+                  var itens = "";
                   $.each(posts, function(i, post) {
-                      write += "<tr><td class='icon'><a href='#'><i class='fa fa-pencil-square-o fa-lg' aria-hidden='true'></a></td>";
-                      write += "<td class='icon'><a href='#'><i class='fa fa-close fa-lg' aria-hidden='true'></a></td>";
-                      write += "<td>"+post.title+"</td></tr>";
-                  })
+                      itens += "<tr><td class='icon'><a href='#'><i class='fa fa-pencil-square-o fa-lg' aria-hidden='true'></a></td>";
+                      itens += "<td class='icon'><a href='#'><i class='fa fa-close fa-lg' aria-hidden='true'></a></td>";
+                      itens += "<td>"+post.title+"</td></tr>";
+                  });
 
+                  var table = "<table class='table table-striped' id='tb-posts'>";
+                      table += "<thead><tr><th colspan='2'>#</th><th>Post</th></tr></thead>";
+                      table += "<tbody>"+itens+"</tbody>";
+                      table += "</table>";
 
-                  $('#content').append(
-                      $("<table class='table table-striped' id='tb-posts'>").append(
-                        $("<thead>").append(
-                          $("<tr>").append(
-                            $("<th colspan='2'>").text('#'),
-                            $("<th>").text('Post')
-                          )
-                        ),
-                        $("<tbody>").html(write)
-                      )
-                    );
-
+                  $('#content').html(table);
             }
 
           },
