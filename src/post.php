@@ -1,4 +1,5 @@
 <?php
+ini_set('display_errors', 1);
 require('Post.class.php');
 
 // pega a variavel GET que passamos no action do form

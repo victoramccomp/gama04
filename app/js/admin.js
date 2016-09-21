@@ -17,6 +17,7 @@ $(document).ready(function() {
            processData: false,
            contentType: false,
            success : function(data) {
+              console.log(data);
                 var post = jQuery.parseJSON(data);
                 if(post.type == "true"){
                     bootbox.confirm(post.msg, function(conf) {
