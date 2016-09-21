@@ -1,5 +1,5 @@
 <?php
-ini_set('display_errors', false);
+ini_set('display_errors', true);
 require('Post.class.php');
 
 // pega a variavel POST que passamos no action do form
