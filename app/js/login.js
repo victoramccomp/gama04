@@ -1,11 +1,12 @@
 function verificarLogin(){
+
     $.ajax({
           type: 'POST',
           url: 'src/login.php',
           data: { action: 'verificarLogin' },
           success:function(data){
             var user = jQuery.parseJSON(data);
-
+            console.log(user);
             if(user == ""){
                 setTimeout("window.location='login.php'",5000);
             }else{

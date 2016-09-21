@@ -61,10 +61,8 @@
                         </div>
                         <div class="form-group">
                             <div class="col-md-12">
-                                <a href=# target="blank">
-                                    <input type="submit" name="button" class='btn-form' values="Entrar">
-                                    </a>
-                            </div>
+                                    <input type="submit" name="button" class='btn-form' value="Enviar">
+                             </div>
                         </div>    
                     </div>
           </section>   
@@ -83,6 +81,10 @@
       <script type="text/javascript" src="app/js/bootbox.min.js"></script>
       <script type="text/javascript" src="app/js/script.js"></script>
       <script type="text/javascript" src="app/js/app.js"></script>
+      <script type="text/javascript" src="app/js/login.js"></script>
+      <script type="text/javascript">
+            verificarLogin();
+      </script>
 
   </body>
 </html>

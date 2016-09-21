@@ -22,7 +22,7 @@ class User{
           return $this->$var;
     }
     
-    public function verificaLogin(){
+    public function verificarLogin(){
 			$stmt = $this->db->query("SELECT id, email, password from Users WHERE email=:email and password=:password");
             $stmt = $this->db->bind(':email', $this->email);
             $stmt = $this->db->bind(':password', $this->password);
@@ -31,8 +31,10 @@ class User{
 
             if(isset($user->id)){
                 $output = array("type" => "true", "msg" => "Login efetuado com sucesso!");
+                
             }else{
                 $output = array("type" => "false", "msg" => "Usuário ou senha incorreto.");
+                
             }
             echo json_encode($output);
 	}
