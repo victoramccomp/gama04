@@ -10,8 +10,9 @@ input.error {
   font-family: OpenSans;
 }
 
-.titulo{
-  font-family: Anders;
+.titulo-blog{
+  font-family: OpenSans;
+  font-weight: bold;
 }
 
 .subtitulo{
@@ -256,9 +257,29 @@ button.close {
 }
 
  .resposta_feedback {
-   float: right; 
+   float: right;
  }
- 
+
+ .blog-posted {
+     margin-top: 37px;
+     display: block;
+ }
+
+ .post-blog-unit{
+   border-bottom: 1px solid #f3f2f2;
+    display: block;
+    margin: 10px 0px;
+
+ }
+
+ .post-blog-unit:hover{
+    background-color: #f3f2f2;
+ }
+
+#post-picture img{
+    width: 100%;
+}
+
 /* CSS MOBILE */
 @media only screen and (max-width: 768px) {
   .nav-icon{

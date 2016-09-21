@@ -8,12 +8,9 @@
         <?php include('menu-blog.php'); ?>
           <section class='blog' id="blog">
               <div class="container">
-                  <div class="row" id="posts-blog">
+                  <div id="posts-blog">
 
                   </div>
-                <a href="index.php" target="blank">
-                    <button type="button" name="button" class='btn-form'>Quero participar da promoção!</button>
-                </a>
               </div>
 
             </section>

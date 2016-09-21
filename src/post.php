@@ -35,7 +35,14 @@ if (isset($_POST['action'])){
 
               }
           break;
+          case "getSinglePost":{
 
+              $post = new Post;
+              $post->id = $_POST['id'];
+              $post->getSinglePost();
+
+              }
+          break;
           default:
               echo "";
           break;

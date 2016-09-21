@@ -9,6 +9,7 @@ class Post{
     private $post;
     private $picture;
     private $db;
+    private $id;
 
     public function __set($var, $value){
           $this->$var = $value;
@@ -30,6 +31,7 @@ class Post{
           $output = array();
           foreach ($posts as $post) {
               $output[] = array(
+                              "id" => $post->id,
                               "title" => $post->title,
                               "post" => $post->post,
                               "posted" => $post->posted
@@ -46,7 +48,7 @@ class Post{
           $upload->file = $this->picture;
           $this->picture = $upload->save();
 
-          $stmt = $this->db->query("INSERT INTO Posts(title, post, author_id, date_Posted, picture)
+          $stmt = $this->db->query("INSERT INTO Posts(title, author_id, date_Posted, picture)
                                       VALUES(:title, :post, 1, NOW(), :picture)");
           $stmt = $this->db->bind(':title', $this->title);
           $stmt = $this->db->bind(':post', $this->post);
@@ -59,6 +61,23 @@ class Post{
           }
 
           echo json_encode($output);
+    }
+
+    function getSinglePost(){
+        $stmt = $this->db->query("SELECT id, title, picture, post, author_id, DATE_FORMAT(date_Posted,'%d/%m/%Y %Hh%i') AS posted FROM Posts WHERE id = :id");
+        $stmt = $this->db->bind(':id', $this->id);
+        $post = $this->db->single();
+
+        $output = array(
+                            "id" => $post->id,
+                            "title" => $post->title,
+                            "picture" => $post->picture,
+                            "post" => $post->post,
+                            "posted" => $post->posted
+                          );
+
+        echo json_encode($output);
+
     }
 
 
