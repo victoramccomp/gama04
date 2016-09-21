@@ -4,3 +4,4 @@
 <link rel="stylesheet" href="../app/bootstrap/bootstrap.min.css" media="screen">
 <link rel="stylesheet" href="../app/font-awesome-4.6.3/css/font-awesome.min.css" media="screen">
 <link rel="stylesheet" href="../app/css/admin.css" media="screen">
+<link rel="stylesheet" href="../app/css/loader-adm.css" media="screen">
