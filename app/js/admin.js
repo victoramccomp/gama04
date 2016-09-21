@@ -8,7 +8,7 @@ function setNewPost(){
 
     var contentPost = tinyMCE.get('post').getContent();
     var post = new FormData();
-    
+
     post.append('title', $("#title").val());
     post.append('picture', $('#picture')[0].files[0]);
     post.append('post', contentPost);
@@ -21,7 +21,7 @@ function setNewPost(){
        contentType: false,
        processData: false,
        success : function(data) {
-      
+          console.log(data);
             var post = jQuery.parseJSON(data);
             if(post.type == "true"){
                 bootbox.confirm(post.msg, function(conf) {
