@@ -44,3 +44,9 @@
     color: #333;
     text-decoration: none;
 }
+
+.btn{
+  padding: 5px 12px;
+  border-radius: 5px;
+  border: 1px solid #CCC;
+}
