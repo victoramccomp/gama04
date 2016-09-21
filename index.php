@@ -4,6 +4,7 @@
 
       <?php include('header.php'); ?>
 
+
   </head>
   <body>
       <main>
@@ -80,6 +81,7 @@
                        <a href="doc/regulamento.pdf" target="blank">
                            <button type="button" name="button" class='btn-form'>Baixe o regulamento</button>
                         </a>
+                      
                 </div>
 
                 </form>
