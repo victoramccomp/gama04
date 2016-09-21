@@ -98,3 +98,12 @@ table .icon{
     filter: alpha(opacity=20);
     opacity: .2;
 }
+
+.bg-loader{
+  position: fixed;
+  top: 0px;
+  width: 85%;
+  height: 100%;
+  background-color: #FFF;
+
+}

@@ -17,7 +17,7 @@
                                 </div>
                                 <div class="form-group">
                                   <label for="title">Capa: </label><br>
-                                  <input type="file" name="capa" id="capa" class="form-input">
+                                  <input type="file" name="capa" id="picture" class="form-input">
                                 </div>
                                 <br>
                                 <div class="form-group">
@@ -34,5 +34,12 @@
 
 
     <?php include('scripts.php'); ?>
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+        tinymce.init({ selector:'#post' });
+
+      });
+    </script>
   </body>
 </html>

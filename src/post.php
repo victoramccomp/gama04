@@ -1,5 +1,4 @@
 <?php
-
 require('Post.class.php');
 
 // pega a variavel GET que passamos no action do form
@@ -28,6 +27,8 @@ if (isset($_POST['action'])){
               //Atribuindo valores ao objeto
               $post->title = $_POST['title'];
               $post->post = $_POST['post'];
+              $post->picture = $_FILES['picture'];
+
 
               //chamando a funcao que faz o insert
               $post->setNewPost();

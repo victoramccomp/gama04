@@ -1,13 +1,12 @@
 $(document).ready(function() {
 
-    tinymce.init({ selector:'textarea' });
-
     $('#form-post').submit(function(event) {
+        loaderContent('init');
         event.preventDefault();
         var post = new FormData();
 
         post.append('title', $("#title").val());
-        post.append('capa', $('#capa')[0].files[0]);
+        post.append('picture', $('#picture')[0].files[0]);
         post.append('post', $('#post').val());
         post.append('action', 'setNewPost');
 
@@ -28,7 +27,7 @@ $(document).ready(function() {
                 }else{
                   bootbox.alert(post.msg);
                 }
-
+                loaderContent();
 
               }
         });
@@ -38,6 +37,7 @@ $(document).ready(function() {
 
 
 function getAllPosts(){
+
   loaderContent('init');
     $.ajax({
           type: 'POST',
@@ -67,7 +67,7 @@ function getAllPosts(){
 
                   $('#content').html(table);
             }
-            
+
             loaderContent();
 
           },

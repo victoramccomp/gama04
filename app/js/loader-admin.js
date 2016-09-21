@@ -1,7 +1,10 @@
 function loaderContent(type){
+
     if(type == "init"){
-        $(".container-admin").append('<div class="loader-admin">Loading...</div>');
+        $(".container-admin").append('<div class="bg-loader"><div class="loader-admin">Loading...</div></div>');
+        $(".btn-primary-admin").prop('disabled', true);
     }else{
-        $(".loader-admin").fadeOut();
+        $(".bg-loader").fadeOut();
+        $(".btn-primary-admin").prop('disabled', false);
     }
 }
