@@ -38,7 +38,6 @@ $(document).ready(function() {
 
 
 function getAllPosts(){
-    loaderContent('init');
     $.ajax({
           type: 'POST',
           url: '../src/post.php',

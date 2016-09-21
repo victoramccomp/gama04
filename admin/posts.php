@@ -23,6 +23,7 @@
                   <div id="content" class="table-responsive">
 
                   </div>
+                  <div class="loader-admin">Loading...</div>
 
                 </div>
 
