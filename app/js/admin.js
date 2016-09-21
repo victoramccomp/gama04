@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    loaderContent();
+
     tinymce.init({ selector:'textarea' });
 
     $('#form-post').submit(function(event) {
@@ -38,11 +38,13 @@ $(document).ready(function() {
 
 
 function getAllPosts(){
+  loaderContent('init');
     $.ajax({
           type: 'POST',
           url: '../src/post.php',
           data: { action: 'getAllPosts' },
           success:function(data){
+            console.log(data);
             var posts = jQuery.parseJSON(data);
 
             if(posts == ""){
@@ -65,6 +67,8 @@ function getAllPosts(){
 
                   $('#content').html(table);
             }
+            
+            loaderContent();
 
           },
           error:function(request, error) {
