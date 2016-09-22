@@ -53,7 +53,7 @@ function setLeadFacebook(){
 
 
 function sendFacebook(){
-    bootbox.confirm("Confirmar cadastro com o facebook.", function(result) {
+    bootbox.confirm("Confirmar cadastro com o Facebook.", function(result) {
         if(result == true){
             setLeadFacebook();
         }
