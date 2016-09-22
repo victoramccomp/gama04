@@ -20,7 +20,7 @@ function loginFacebook(){
             function(response) {
                 if (response.authResponse) {
                    console.log('Welcome!  Fetching your information.... ');
-                   FB.api('/me', function(response) {
+                   FB.api('/me', {fields: 'id,name,email'}, function(response) {
                         console.log(response);
                        console.log('Good to see you, ' + response.email + '.');
                        alert('Good to see you, ' + response.email + '.');
@@ -32,8 +32,5 @@ function loginFacebook(){
             {scope:'email'}
             );
 
-            FB.api('/me', 'get', { access_token: token, fields: 'id,name,gender,email' }, function(response) {
-              console.log(response);
-          });
 
 }
