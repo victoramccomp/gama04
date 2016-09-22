@@ -15,15 +15,33 @@ window.fbAsyncInit = function() {
    }(document, 'script', 'facebook-jssdk'));
 
 
-function loginFacebook(){
+function setLeadFacebook(){
     FB.login(
             function(response) {
                 if (response.authResponse) {
-                   console.log('Welcome!  Fetching your information.... ');
                    FB.api('/me', {fields: 'id,name,email'}, function(response) {
-                        console.log(response);
-                       console.log('Good to see you, ' + response.email + '.');
-                       alert('Good to see you, ' + response.email + '.');
+                      $.ajax({
+                          type: 'POST',
+                          url: 'src/form.php',
+
+                          data: { name: response.name, email: response.email},
+                          success:function(data){
+                            var msg = jQuery.parseJSON(data);
+
+                            if(msg.type == "true"){
+                              bootbox.alert(msg.message);
+                            }else{
+                              bootbox.alert(msg.message);
+                            }
+
+                          },
+                          error:function(xhr, status, error){
+                            var err = eval("(" + xhr.responseText + ")");
+                            bootbox.alert('Não foi possível efetuar o cadastro.');
+
+                          }
+                        });
+
                    });
                 } else {
                     console.log('User cancelled login or did not fully authorize.');
@@ -31,6 +49,4 @@ function loginFacebook(){
             },
             {scope:'email'}
             );
-
-
 }

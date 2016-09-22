@@ -49,7 +49,7 @@ $(document).ready(function() {
 	        }
 
           if(isValid == true){
-                  $.ajax({
+                $.ajax({
                   type: 'POST',
                   url: 'src/form.php',
 
