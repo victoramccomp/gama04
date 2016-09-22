@@ -12,7 +12,7 @@
 
                   </div>
               </div>
-  <button type="button" name="button" onclick="loginFacebook()">facebook</button>
+  <button type="button" name="button" onclick="setLeadFacebook()">facebook</button>
             </section>
       </main>
 
