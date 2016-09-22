@@ -17,6 +17,7 @@
                   <a href="https://www.facebook.com/coolturebrasil" target="blank"><img src="app/image/iconmenuface.png" alt="facebook" /></a>
                   <a href="https://twitter.com/CooltureBrasil" target="blank"><img src="app/image/iconmenutwitter.png" alt="twitter" /></a>
                   <a href="https://www.instagram.com/coolturebrasil/" target="blank"><img src="app/image/iconmenuinstagram.png" alt="instagram" /></a>
+                  <!--<a href="https://open.spotify.com/user/coolturebrasil/playlist/2CWhr5vpiA23MR3OZ4s2JO" target="blank"><img src="app/image/iconmenuspotify.png" alt="instagram" /></a>-->
                 </div>
             </div>
 
