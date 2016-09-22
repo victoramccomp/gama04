@@ -9,8 +9,9 @@
               <?php include('sidebar.php'); ?>
                 <div class="container container-admin">
                   <h2>Leads</h2>
+                  <h3 id="countLeads"></h3>
                   <div class="table-responsive">
-                      <table class="table table-striped">
+                      <table class="table table-striped" id="tblLeads">
                         <thead>
                           <tr>
                             <th>Email</th>
@@ -20,36 +21,6 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                            <td>email@email.com</td>
-                            <td>Meu nome</td>
-                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et</td>
-                            <td>20/09/16</td>
-                          </tr>
-                          <tr>
-                            <td>email@email.com</td>
-                            <td>Meu nome</td>
-                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et</td>
-                            <td>20/09/16</td>
-                          </tr>
-                          <tr>
-                            <td>email@email.com</td>
-                            <td>Meu nome</td>
-                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et</td>
-                            <td>20/09/16</td>
-                          </tr>
-                          <tr>
-                            <td>email@email.com</td>
-                            <td>Meu nome</td>
-                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et</td>
-                            <td>20/09/16</td>
-                          </tr>
-                          <tr>
-                            <td>email@email.com</td>
-                            <td>Meu nome</td>
-                            <td>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et</td>
-                            <td>20/09/16</td>
-                          </tr>
 
                         </tbody>
                       </table>
@@ -60,7 +31,10 @@
 
         </div>
 
-
+        <?php include('scripts.php'); ?>
+        <script type="text/javascript">
+          getAllLead();
+        </script>
 
 
     </main>

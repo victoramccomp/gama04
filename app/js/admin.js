@@ -57,24 +57,64 @@ function getAllPosts(){
             }else{
 
                   var itens = "";
-                  $.each(posts, function(i, post) {
-                      itens += "<tr><td class='icon'><a href='#'><i class='fa fa-pencil-square-o fa-lg' aria-hidden='true'></a></td>";
-                      itens += "<td class='icon'><a href='#'><i class='fa fa-close fa-lg' aria-hidden='true'></a></td>";
-                      itens += "<td>"+post.title+"</td></tr>";
-                  });
-
                   var table = "<table class='table table-striped' id='tb-posts'>";
                       table += "<thead><tr><th colspan='2'>#</th><th>Post</th></tr></thead>";
-                      table += "<tbody>"+itens+"</tbody>";
+                      table += "<tbody></tbody>";
                       table += "</table>";
+                      $('#content').html(table);
 
-                  $('#content').html(table);
+                  $.each(posts, function(i, post) {
+                        itens = "";
+                        itens += "<tr><td class='icon'><a href='#'><i class='fa fa-pencil-square-o fa-lg' aria-hidden='true'></a></td>";
+                        itens += "<td class='icon'><a href='#'><i class='fa fa-close fa-lg' aria-hidden='true'></a></td>";
+                        itens += "<td>"+post.title+"</td></tr>";
+                        $('#tb-posts tbody').append(itens);
+                  });
+
             }
 
             loaderContent();
 
           },
           error:function(request, error) {
+                if (request.status==0) {
+                    console.log('You are offline!!\n Please Check Your Network.');
+                } else if(request.status==404) {
+                    console.log('Requested URL not found.');
+                } else if(request.status==500) {
+                    console.log('Internel Server Error.');
+                } else if(error=='parsererror') {
+                    console.log('Error.\nParsing JSON Request failed.');
+                } else if(error=='timeout'){
+                    console.log('Request Time out.');
+                } else {
+                    console.log('Unknow Error.\n'+request.responseText);
+                }
+          }
+    });
+}
+
+
+
+
+function getAllLead(){
+
+    $.ajax({
+      type: 'GET',
+      url: '../src/lead.php',
+      data:"action=getAllLead",
+      success: function(data){
+          var leads = jQuery.parseJSON(data);
+          $("#countLeads").html("TOTAL DE LEADS: "+leads.count);
+          var line;
+
+          $.each(leads, function(i, lead) {
+              line = "<tr><td>"+lead.email+"</td><td>"+lead.name+"</td><td>"+lead.answer+"</td><td>"+lead.regtime+"</td></tr>";
+              $("#tblLeads tbody").append(line);
+          });
+
+      },
+      error:function(request, error) {
                 if (request.status==0) {
                     console.log('You are offline!!\n Please Check Your Network.');
                 } else if(request.status==404) {

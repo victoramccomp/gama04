@@ -5,26 +5,10 @@ $connection = DBConnection();
 
 function ListagemLeads($connection) {
     try {
-        $stmt = $connection->prepare("SELECT name, email, answer, regtime FROM Leads");
-
+        $stmt = $connection->prepare("SELECT Count(email) as leads FROM Leads");
         $stmt->execute();
-        $totalLeads = 0;
-        
-        echo "<table><tr>" .
-             "<th><strong>Nome</strong></th>" .
-             "<th><strong>Resposta</strong></th>" .
-             "<th><strong>Horário</strong></th></tr>";
-
-        while ($linha = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            $totalLeads++;
-            echo "<tr>" .
-                 "<td>{$linha['name']}</td>" .
-                 "<td>{$linha['answer']}</td>" .
-                 "<td>{$linha['regtime']}</td>" .
-                 "</tr>";
-        }
-        echo "</table></br>";
-        echo "<h1><strong>TOTAL DE LEADS: " . $totalLeads . "</strong></h1>";
+        $totalLeads = $stmt->fetch(PDO::FETCH_OBJ);
+        echo "<h1><strong>TOTAL DE LEADS: " . $totalLeads->leads . "</strong></h1>";
 
     }
     catch (PDOException $e) {
