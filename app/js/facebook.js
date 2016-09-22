@@ -17,10 +17,10 @@ window.fbAsyncInit = function() {
 
 function loginFacebook(){
      FB.login(function(response) {
-        console.log(response);
          if (response.authResponse) {
           console.log('Welcome!  Fetching your information.... ');
           FB.api('/me', function(response) {
+            console.log(response);
             console.log('Good to see you, ' + response.name + '.');
           });
          } else {
