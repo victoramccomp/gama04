@@ -29,7 +29,7 @@ function setLeadFacebook(){
                             var msg = jQuery.parseJSON(data);
 
                             if(msg.type == "true"){
-                              bootbox.alert(msg.message);
+                              bootbox.alert(" Muito obrigado pelo seu cadastro :) ");
                             }else{
                               bootbox.alert(msg.message);
                             }
@@ -49,4 +49,14 @@ function setLeadFacebook(){
             },
             {scope:'email'}
             );
+}
+
+
+function sendFacebook(){
+    bootbox.confirm("Confirmar cadastro com o facebook.", function(result) {
+        if(result == true){
+            setLeadFacebook();
+        }
+    });
+
 }

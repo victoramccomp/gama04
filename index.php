@@ -4,7 +4,6 @@
 
       <?php include('header.php'); ?>
 
-
   </head>
   <body>
       <main>
@@ -44,7 +43,7 @@
               </div>
                     <div class="container">
                         <div class="row form-group text-left">
-                            <div class="col-md-12">
+                            <div class="col-md-6">
                                 <div class="form-group" class = >
                                     <p id = "camposObrigatorios"></p>
                                     <label for="name">Nome</label><br>
@@ -75,13 +74,20 @@
                                           </div>
                                       </div>
                                 </div>
+                                <input type="submit" name="button" class='btn-form' value="Enviar">
+                                <a href="doc/regulamento.pdf" target="blank">
+                                    <button type="button" name="button" class='btn-form'>Baixe o regulamento</button>
+                                 </a>
+                            </div>
+                            <div class="col-md-6 criatividade text-center">
+                                <span class='criatividade-title'>Sem criatividade agora? </span>
+                                <p>
+                                    Cadastre-se com o facebook e avisaremos sobre as próximas promoções no nosso site!!
+                                </p>
+                                <button type="button" name="button" class='btn-facebook' onclick="sendFacebook()"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i> Cadastrar com o Facebook</button>
                             </div>
                        </div>
-                       <input type="submit" name="button" class='btn-form' value="Enviar">
-                       <a href="doc/regulamento.pdf" target="blank">
-                           <button type="button" name="button" class='btn-form'>Baixe o regulamento</button>
-                        </a>
-                      
+
                 </div>
 
                 </form>

@@ -256,6 +256,16 @@ button.close {
   padding: 5px 25px;
 }
 
+
+.btn-default{
+  background-color: #CECECE;
+  color: #FFFFFF;
+  border: 1px solid #CECECE;
+  border-radius: 8px;
+  padding: 5px 25px;
+}
+
+
  .resposta_feedback {
    float: right;
  }
@@ -278,6 +288,32 @@ button.close {
 
 #post-picture img{
     width: 100%;
+}
+
+.criatividade{
+    padding: 40px 10px;
+}
+
+.criatividade-title{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.criatividade p{
+      font-size: 20px;
+}
+
+.btn-facebook{
+    color: #FFF;
+    padding: 10px 20px;
+    background-color: #365899;
+    border-radius: 3px;
+    border: 1px solid #365899;
+    font-weight: bold;
+}
+
+.btn-facebook:hover{
+  background-color: #4267b2;
 }
 
 /* CSS MOBILE */

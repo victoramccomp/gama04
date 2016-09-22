@@ -12,7 +12,6 @@
 
                   </div>
               </div>
-  <button type="button" name="button" onclick="setLeadFacebook()">facebook</button>
             </section>
       </main>
 
