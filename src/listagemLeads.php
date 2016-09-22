@@ -5,7 +5,7 @@ $connection = DBConnection();
 
 function ListagemLeads($connection) {
     try {
-        $stmt = $connection->prepare("SELECT Count(email) as leads FROM Leads");
+        $stmt = $connection->prepare("SELECT Count(email) as leads FROM Leads WHERE email IS NOT NULL");
         $stmt->execute();
         $totalLeads = $stmt->fetch(PDO::FETCH_OBJ);
         echo "<h1><strong>TOTAL DE LEADS: " . $totalLeads->leads . "</strong></h1>";

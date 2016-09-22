@@ -28,7 +28,7 @@ class Lead{
     function getAllLead(){
           $stmt = $this->db->query("SELECT name, email, answer,
                                     DATE_FORMAT(regtime,'%d/%m/%Y %Hh%i') AS regtime
-                                    FROM Leads ORDER BY regtime DESC");
+                                    FROM Leads WHERE email IS NOT NULL ORDER BY regtime DESC");
           $leads = $this->db->result();
           $count = $this->db->rowCount();
           $this->db = null;//fechando a conexao
