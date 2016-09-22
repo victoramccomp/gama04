@@ -9,7 +9,7 @@
           <section class='blog' id="blog">
               <div class="container">
                   <div id="posts-blog">
-
+                    <!-- <?php include('comentario.php'); ?> -->
                   </div>
               </div>
             </section>
