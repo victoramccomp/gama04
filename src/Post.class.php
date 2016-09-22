@@ -8,6 +8,7 @@ class Post{
     private $title;
     private $post;
     private $picture;
+    private $author;
     private $db;
     private $id;
 
@@ -51,10 +52,11 @@ class Post{
           }
 
           $stmt = $this->db->query("INSERT INTO Posts(title, post, author_id, date_Posted, picture)
-                                      VALUES(:title, :post, 1, NOW(), :picture)");
+                                      VALUES(:title, :post, :author, NOW(), :picture)");
           $stmt = $this->db->bind(':title', $this->title);
           $stmt = $this->db->bind(':post', $this->post);
           $stmt = $this->db->bind(':picture', $this->picture);
+          $stmt = $this->db->bind(':author', $this->author);
 
           if($this->db->execute()){
               $output = array("type" => "true", "msg" => "Seu post foi cadastrado (:");

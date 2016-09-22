@@ -14,17 +14,6 @@
     <link rel="stylesheet" href="app/bootstrap/bootstrap.min.css" media="screen">
     <link rel="stylesheet" href="app/font-awesome-4.6.3/css/font-awesome.min.css" media="screen">
     <link rel="stylesheet" href="app/css/form.css" media="screen">
-    <script>
-
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-84283899-2', 'auto');
-      ga('send', 'pageview');
-
-    </script>
   </head>
   <body>
       <main>
@@ -42,49 +31,54 @@
               </div>
           </div>
           <section class='login-blog' id="loginBlog">
-               <form class="form-login" id="login" method="POST">
+               <form class="form-login" action="src/Auth.php" id="login" method="POST">
                     <div class="container">
-                        <div class="form-group">
-                            <div class="col-md-12">
+                            <div class="col-md-6 col-md-offset-3">
                                 <h3>LOGIN</h3><br>
+                                <?php
+                                    if($_GET['auth'] == 'error'){
+                                        echo "<div class='alert alert-danger'>";
+                                        echo "O nome de usuário e a senha fornecidos não correspondem às informações em nossos registros. <br>";
+                                        echo "<strong>Verifique-as e tente novamente.</strong>";
+                                        echo "</div>";
+                                    }else if($_GET['auth'] == 'session'){
+                                        echo "<div class='alert alert-danger'>";
+                                        echo "Sua sessão expirou. <br>";
+                                        echo "<strong>Efetue o login para continuar navegando.</strong>";
+                                        echo "</div>";
+                                    }
+
+                                 ?>
+
+                            <div class="form-group">
+                                <label for="idUser">Email: </label>
+                                <input type="text" class='form-control required' id="idUser" name="email">
                             </div>
-                            <div class="col-md-12">
-                                <label for="idUser">Usuário: </label>
-                                <input type="text" class='form-control required' id="idUser" name="user">
-                            </div>
-                        </div>
                         <div class="form-group">
-                            <div class="col-md-12">
+
                                 <label for="idSenha">Senha: </label>
                                 <input type="password" class='form-control required' id="idSenha" name="password">
-                            </div>
+
                         </div>
                         <div class="form-group">
-                            <div class="col-md-12">
-                                    <input type="submit" name="button" class='btn-form' value="Enviar">
-                             </div>
-                        </div>    
+                                  <input type="submit" name="button" class='btn-form' value="Entrar">
+                        </div>
+                        </div>
                     </div>
-          </section>   
+          </section>
       </main>
-       </form>     
+       </form>
        <footer id="contato text-center">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <img src="app/image/logo.png" alt="logo" />
+
                 </div>
            </div>
-        </div>                   
-      <script type="text/javascript" src="app/js/jquery-3.1.0.min.js"></script>
-      <script type="text/javascript" src="app/js/bootstrap.min.js"></script>
-      <script type="text/javascript" src="app/js/bootbox.min.js"></script>
-      <script type="text/javascript" src="app/js/script.js"></script>
-      <script type="text/javascript" src="app/js/app.js"></script>
+        </div>
+      <?php include('scripts.php'); ?>
       <script type="text/javascript" src="app/js/login.js"></script>
-      <script type="text/javascript">
-            verificarLogin();
-      </script>
+
 
   </body>
 </html>

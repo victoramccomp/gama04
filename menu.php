@@ -7,7 +7,7 @@
             <div class="col-md-6">
                 <ul class='nav-list'>
                   <li><a href="#home" class='scroll'>Home</a></li> |
-                  <li><a href="https://coolture.com.br/blog.php" class='scroll'>Blog</a></li> |
+                  <li><a href="blog.php">Blog</a></li> |
                   <li><a href="#sobre" class='scroll'>Sobre a Coolture</a></li> |
                   <li><a href="#contato" class='scroll'>Contato</a></li>
                 </ul>

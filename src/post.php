@@ -21,7 +21,7 @@ if (isset($_POST['action'])){
             }
           break;
           case "setNewPost":{
-
+              session_start();
               //Criando e Instanciando o objeto
               $post = new Post;
 
@@ -29,6 +29,7 @@ if (isset($_POST['action'])){
               $post->title = $_POST['title'];
               $post->post = $_POST['post'];
               $post->picture = $_FILES['picture'];
+              $post->author = $_SESSION["user"];
 
 
               //chamando a funcao que faz o insert

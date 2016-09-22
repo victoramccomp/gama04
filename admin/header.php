@@ -1,3 +1,8 @@
+<?php
+  require_once('checkSession.php');
+
+?>
+
 <meta charset="utf-8">
 <title>Coolture</title>
 <link rel="shortcut icon" type="image/x-icon" href="app/image/favicon.ico">

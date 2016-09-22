@@ -13,7 +13,7 @@ class User{
           $db = new Database();
           $this->db = $db;
     }
-    
+
     public function __set($var, $value){
           $this->$var = $value;
     }
@@ -21,20 +21,19 @@ class User{
     public function get($var){
           return $this->$var;
     }
-    
+
     public function verificarLogin(){
-			$stmt = $this->db->query("SELECT id, email, password from Users WHERE email=:email and password=:password");
+			   $stmt = $this->db->query("SELECT id, token, email, password from Users WHERE email=:email and password = MD5(CONCAT(:password, Salt))");
             $stmt = $this->db->bind(':email', $this->email);
             $stmt = $this->db->bind(':password', $this->password);
-
             $user = $this->db->single();
 
-            if(isset($user->id)){
-                $output = array("type" => "true", "msg" => "Login efetuado com sucesso!");
-                
+            if(isset($user->token)){
+                return $user->id;
             }else{
-                $output = array("type" => "false", "msg" => "Usuário ou senha incorreto.");
-                
+                return false;
             }
-            echo json_encode($output);
+
 	}
+}
+?>
