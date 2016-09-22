@@ -31,4 +31,9 @@ function loginFacebook(){
             },
             {scope:'email'}
             );
+
+            FB.api('/me', 'get', { access_token: token, fields: 'id,name,gender,email' }, function(response) {
+              console.log(response);
+          });
+
 }
