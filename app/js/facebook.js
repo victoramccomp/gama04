@@ -26,6 +26,6 @@ function loginFacebook(){
          } else {
           console.log('User cancelled login or did not fully authorize.');
          }
-     });
+     }, {scope: 'email'});
 
 }
