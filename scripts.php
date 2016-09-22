@@ -5,5 +5,5 @@
 <script type="text/javascript" src="app/js/script.js"></script>
 <script type="text/javascript" src="app/js/app.js"></script>
 <script type="text/javascript" src="app/js/blog.js"></script>
-
+<script type="text/javascript" src="app/js/facebook.js"></script>
 </script>
