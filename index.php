@@ -82,7 +82,7 @@
                             <div class="col-md-6 criatividade text-center">
                                 <span class='criatividade-title'>Sem criatividade agora? </span>
                                 <p>
-                                    Cadastre-se com o facebook e avisaremos sobre as próximas promoções do nosso site!!
+                                    Cadastre-se com o facebook e avisaremos sobre as próximas promoções do nosso site!!!
                                 </p>
                                 <button type="button" name="button" class='btn-facebook' onclick="sendFacebook()"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i> Cadastrar com o Facebook</button>
                             </div>

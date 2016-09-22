@@ -2,13 +2,13 @@
     <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <img src="app/image/logo.png" alt="Logo" class="logo"/>
+                <a href="http://coolture.com.br"><img src="app/image/logo.png" alt="Logo" class="logo"/></a>
             </div>
             <div class="col-md-6">
                 <ul class='nav-list'>
-                  <li><a href="/">Home</a></li> |
+                  <li><a href="http://coolture.com.br">Home</a></li> |
                   <li><a href="#blog" class='scroll'>Blog</a></li> |
-                  <li><a href="/#contato">Contato</a></li>
+                  <li><a href="#contato">Contato</a></li>
                 </ul>
             </div>
             <div class="col-md-3">
