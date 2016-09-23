@@ -18,7 +18,7 @@
                   <img src="app/image/iconinstagram.png" alt="instagram" />
                 </a>
                 <a href="https://open.spotify.com/user/coolturebrasil/playlist/2CWhr5vpiA23MR3OZ4s2JO" target="blank">
-                  <img src="app/image/iconspotify.png" alt="instagram" />
+                  <img src="app/image/iconspotify.png" alt="spotify" />
                 </a>
           </div>
       </div>
